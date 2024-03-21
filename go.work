@@ -1,7 +1,9 @@
 go 1.22.1
 
 use (
-	./conference
 	./contribute
+	./file
+	./conference
 	./user
+	./common
 )
