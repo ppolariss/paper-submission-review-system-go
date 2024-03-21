@@ -27,3 +27,8 @@ type ConferenceApplication struct {
 	CreatedAt         time.Time `json:"created_at" gorm:"autoCreateTime"`
 	UpdatedAt         time.Time `json:"updated_at" gorm:"autoUpdateTime"`
 }
+
+//func GetConferenceByName(name string) (conference Conference, err error) {
+//	err = db.Where("conference_name = ?", name).First(&conference).Error
+//	return
+//}

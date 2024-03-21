@@ -2,6 +2,8 @@ package schema
 
 import "time"
 
+var STATUS = []string{"准备中", "投稿中", "审稿中", "终评中", "审稿结束"}
+
 type Conference struct {
 	ConferenceName         string    `json:"conference_name"`
 	ConferenceAbbr         string    `json:"conference_abbr"`

@@ -18,3 +18,7 @@ type StartSubmissionRequest struct {
 	SubmissionDeadline     string `json:"submission_deadline" validate:"required,datetime=2006-01-02T15:04:05"`
 	ReviewResultAnnounceAt string `json:"review_result_announce_at" validate:"required,datetime=2006-01-02T15:04:05"`
 }
+
+type ConferenceName struct {
+	ConferenceName string `json:"conference_name" validate:"required"`
+}

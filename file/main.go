@@ -5,6 +5,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/pprof"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	"github.com/opentreehole/go-common"
+	conferenceAPI "github.com/ppolariss/paper-submission-review-system-go/conference/api"
 	"github.com/ppolariss/paper-submission-review-system-go/file/api"
 	"github.com/ppolariss/paper-submission-review-system-go/file/config"
 	"github.com/rs/zerolog/log"
@@ -26,6 +27,7 @@ func main() {
 	})
 	registerMiddlewares(app)
 	api.RegisterRoutes(app)
+	conferenceAPI.RegisterRoutes(app)
 	go func() {
 		err := app.Listen("0.0.0.0:8000")
 		if err != nil {
